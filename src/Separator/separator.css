@@ -1,4 +1,4 @@
-.wrapper{
+.separator{
     width: 100%;
     height: 15vh;
     text-align: center;
@@ -9,7 +9,7 @@
     font-size: 4vmin;
 }
 
-.wrapper__text{
+.separator__text{
 
     font-family: FuturaLightC;
     position: relative;
@@ -17,8 +17,8 @@
     font-size: 4vmin;
     transition: 0.2s;
 }
-.wrapper__text::after,
-.wrapper__text::before{
+.separator__text::after,
+.separator__text::before{
     position: absolute;
     border-top: 1px solid white;
     width: 80%;
@@ -27,22 +27,22 @@
     content: '';
     transition: 0.2s;
 }
-.wrapper__text::before{
+.separator__text::before{
     margin-top: -5%;
     top: 0;
 }
-.wrapper__text::after{
+.separator__text::after{
     margin-bottom: -5%;
     bottom: 0;
 }
-.wrapper:hover .wrapper__text::before{
+.separator:hover .separator__text::before{
     width: 50%;
     /* margin-top: -6%; */
 }
-.wrapper:hover .wrapper__text::after{
+.separator:hover .separator__text::after{
     width: 50%;
     /* margin-bottom: -6%; */
 }
-.wrapper:hover .wrapper__text{
+.separator:hover .separator__text{
     font-size: 1.2em;
 }
