@@ -1,0 +1,9 @@
+@font-face{
+font-family: "FuturaLightC";
+  font-style: normal;
+  font-weight: 400;
+  src: local("FuturaLightC"),
+       url("./FuturaLightC.woff2") format("woff2"),
+       url("./FuturaLightC.woff") format("woff"),
+       url("./FuturaLightC.ttf") format("truetype");
+}

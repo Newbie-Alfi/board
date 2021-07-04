@@ -1,0 +1,119 @@
+.footer{
+    width: 100%;
+    height: 20vw;
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.footer__item{
+    overflow: hidden;
+    font-family: FuturaLightC;
+    position: relative;
+    display: flex;
+
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.footer__text-wrapper{
+    width: 90%;
+    color: rgb(219, 219, 219);
+
+    font-size: 32px;
+    z-index: 4;
+    position: absolute;
+}
+
+.dimming-footer{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.footer__bg-photo{
+    position: absolute;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer__title{
+    opacity: 1;
+    z-index: 2;
+    font-size: 1em;
+    transition: 1s;
+    margin-bottom: 8%;
+    
+}
+.footer__text{
+    font-size:0.7em;
+    margin: 0;
+}
+
+/* .dimming-footer:hover .footer__bg-photo{
+    transform: scale(1.2);
+} */
+.dimming-footer:hover {
+    opacity: 0.3;
+}
+.dimming-footer:hover .footer__title{
+    opacity: 0;
+}
+.footer__text a{
+    color: rgb(255, 255, 255);
+}
+
+@media (max-width:550px) {
+    .footer__text-wrapper{
+        font-size: 16px;
+    }
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 50vw);
+    }
+    .footer__item:last-child {
+        grid-column: span 2;
+    }
+    .footer__title{
+        margin-bottom: 0%;
+    }
+}
+@media (orientation:portrait) and (min-width:550px) {
+    .footer__text-wrapper{
+        font-size: 16px;
+    }
+    .footer__item:nth-child(1),
+    .footer__item:nth-child(2),
+    .footer__item:nth-child(3){
+        grid-column: span 2;
+    }
+    .footer__item:nth-child(4),
+    .footer__item:nth-child(5){
+        grid-column: span 3;
+    }
+    .footer{
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2,33.3vw);
+    }
+    .footer__title{
+        margin-bottom: 0%;
+    }
+}
+@media (orientation: landscape) and (max-width:1450px) {
+    .footer__text-wrapper{
+        font-size: 16px;
+    }
+    .footer__title{
+        margin-bottom: 0%;
+    }
+}
