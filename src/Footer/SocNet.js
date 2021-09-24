@@ -2,7 +2,6 @@ import './SocNet.css'
 
 import soc1 from './inst.svg'
 import soc2 from './youtube.svg'
-// import soc3 from './vk.svg'
 import soc4 from './fc.svg'
 import soc5 from './twitter.svg'
 
