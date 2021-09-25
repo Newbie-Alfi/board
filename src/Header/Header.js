@@ -1,25 +1,23 @@
 import React from 'react';
 import board from './board_logo.svg'
-import Navbar from '../Navbar/Navbar';
+import { Navbar } from '../Navbar/Navbar';
 import header from './header.jpg'
 import './header.css';
 import '.././fonts/fonts.css'
 
-const Header = () => {
+export function Header() {
     return (
         <header className="header" id="pos1">
             <div className="header__container">
                 <Navbar/>
                 <div ></div>
-                <img src={header} className="header__background"></img>
+                <img src={header} className="header__background" alt='restart the site'></img>
                 <div className="dimming"></div>
                 <div className="header__center">
-                    <img className="header__img" src={board}></img>
+                    <img className="header__img" src={board} alt='restart the site'></img>
                     <h2 className="header__title">Мы вас ценим</h2>
                 </div>
             </div>
         </header>
     );
 };
-
-export default Header;

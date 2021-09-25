@@ -29,7 +29,7 @@ let FooterItem = (props) =>{
                 <p className="footer__text">{props.text_str3}<a href={props.source_str3}>{props.source_str3}</a></p>
             </div>
             <div onMouseOver={ShowMePicture} onMouseLeave={ShowMeText} className="dimming-footer"></div>
-            <img src={props.img} className="footer__bg-photo"/>
+            <img className="footer__bg-photo" src={props.img} alt="sorry, restart the site"/>
         </div>
     );
 }

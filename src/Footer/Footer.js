@@ -9,7 +9,7 @@ import React from 'react'
 import FooterItem from './Footer__item'
 import SocNet from './SocNet.js'
 
-let Footer = () => {
+export function Footer(){
     return (
         <footer className="anchor__source footer">
             <FooterItem img = {rinh1} title="Приемная комисия"  text_str1="Телефон: " text_str2="Факс: " text_str3="E-mail: " source_str1 = "+7(777)777-77-77" source_str2 = "+7(777)777-77-77" source_str3 = "Oversleep-1-Lesson@gg.ru"/>
@@ -20,5 +20,3 @@ let Footer = () => {
         </footer>
     );
 }
-
-export default Footer;

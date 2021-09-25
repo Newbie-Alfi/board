@@ -1,6 +1,5 @@
 import './Students.css'
 import '.././fonts/fonts.css'
-// import {NavLink} from 'react-router-dom'
 let Student = (props) => {
     return(
             <a className="student">
