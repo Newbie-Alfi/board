@@ -6,7 +6,7 @@ import rinh3 from './RINH3.jpg'
 import rinh4 from './RINH4.png'
 import rinh5 from './RINH5.png'
 import React from 'react'
-import FooterItem from './Footer__item'
+import { FooterItem } from './FooterItem'
 import SocNet from './SocNet.js'
 
 export function Footer(){
