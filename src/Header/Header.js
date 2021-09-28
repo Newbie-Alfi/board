@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useRef, useEffect, useContext} from 'react';
+import { MyContext } from '../App';
 import board from './board_logo.svg'
 import { Navbar } from '../Navbar/Navbar';
 import header from './header.jpg'
@@ -6,8 +7,15 @@ import './header.css';
 import '.././fonts/fonts.css'
 
 export function Header() {
+    const anchor = useRef();
+
+    const value = useContext(MyContext);
+    useEffect(()=> {
+        value.updateAnchors(anchor);
+    }, [])
+
     return (
-        <header className="header" id="pos1">
+        <header className="header" id="pos1" ref={anchor}>
             <div className="header__container">
                 <Navbar/>
                 <div ></div>

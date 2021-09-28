@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState, useContext} from 'react';
 import './App.css';
 import { AnchorList } from './Anchor/AnchorList.js';
 import Separator from './Separator/Separator';
@@ -7,31 +7,36 @@ import { Header } from './Header/Header.js';
 import { Footer } from './Footer/Footer';
 import { Students } from './Students/Students';
 import './fonts/fonts.css'
+
+export const MyContext = React.createContext()
+
 export function App() {
-  let [anchors, setAnchors] = useState([]);
+
+  let [listAnchorNodes, setAnchorNodes] = useState([]);
+  let [listAnchorParameters, setAnchorParametrs] = useState([]);
+
+  let updateAnchors = (value) => setAnchorNodes(prev => [...prev, value]);
 
   useEffect(() => {
-        
-        let anchor__source = document.querySelectorAll(".anchor__source");
-        let arrayFindAnchors = [];
-        anchor__source.forEach(anchor => {
-          arrayFindAnchors.push({
-            Y : anchor.getBoundingClientRect().top + window.pageYOffset,
-            id : Date.now() + Math.random()
-          })
-        })
-        setAnchors([...anchors, ...arrayFindAnchors])
-  },[])
+    listAnchorNodes.map(anchorNode => {
+      setAnchorParametrs(prev => [...prev, {Y : anchorNode.current.getBoundingClientRect().top + window.pageYOffset, id: Date.now() + Math.random()}])
+    })
+    
+  },[listAnchorNodes])
   
   return (
+    <MyContext.Provider value={{
+      listAnchorNodes, updateAnchors
+    }}>
         <div className="App" >
-            <Header />
-            <AnchorList anchors = {anchors}/>
+            <Header/>
+            <AnchorList anchors = {listAnchorParameters}/>
             <Separator text={'Мы даем возможность'}/>
             <MainStudents/>
             <Separator  text={'Наши студенты'}/>
             <Students/>
             <Footer/>
         </div>
+      </MyContext.Provider>
   );
 }

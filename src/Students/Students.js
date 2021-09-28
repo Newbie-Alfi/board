@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useRef, useEffect } from 'react'
+import { MyContext } from '../App.js'
 import Student from './Student.js'
 import './Students.css'
 
@@ -22,9 +23,16 @@ export function Students(){
         {name: 'Виктор Белославян', photo: 'https://upload.wikimedia.org/wikipedia/commons/a/af/Bill_Gates_-_Nov._8%2C_2019.jpg', group: 'ИСТ-311', about: 'Просто лучший, просто красавчик, обожаю его', rating: 54}
         ]
     )
+    
+    const value = useContext(MyContext);
+    const anchor = useRef();
 
+    useEffect(() => {
+        value.updateAnchors(anchor);
+    },[])
+    
     return(
-        <ul className="anchor__source students-list" id="anchor__source">
+        <ul className="anchor__source students-list" id="anchor__source" ref={anchor}>
             {
                 students.map( student => <Student photo={student.photo} name={student.name} about={student.about} rating={student.rating} group={student.group} key={Date.now() + Math.random()}/>)
             }
