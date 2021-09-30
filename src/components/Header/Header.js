@@ -1,6 +1,5 @@
-import React, {useRef, useEffect, useContext} from 'react';
-// import { useAnchorCreator } from '../../'
-import { MyContext } from '../../App';
+import React, {useRef} from 'react';
+import { useAnchorCreator } from '../../hooks/useAnchorCreator.js'
 import board from '../../img/header/board_logo.svg'
 import { Navbar } from '../Navbar/Navbar';
 import header from '../../img/header/header.jpg'
@@ -8,11 +7,7 @@ import './header.css';
 
 export function Header() {
     const anchor = useRef();
-
-    const value = useContext(MyContext);
-    useEffect(()=> {
-        value.updateAnchors(anchor);
-    }, [])
+    useAnchorCreator(anchor);
 
     return (
         <header className="header" id="pos1" ref={anchor}>

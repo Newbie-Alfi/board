@@ -1,5 +1,5 @@
-import React, { useState, useContext, useRef, useEffect } from 'react'
-import { MyContext } from '../../App.js'
+import React, { useState, useRef } from 'react'
+import { useAnchorCreator } from '../../hooks/useAnchorCreator.js'
 import Student from './Student.js'
 import './Students.css'
 
@@ -24,13 +24,8 @@ export function Students(){
         ]
     )
     
-    const value = useContext(MyContext);
     const anchor = useRef();
-
-    useEffect(() => {
-        value.updateAnchors(anchor);
-    },[])
-    
+    useAnchorCreator(anchor);
     return(
         <ul className="anchor__source students-list" id="anchor__source" ref={anchor}>
             {

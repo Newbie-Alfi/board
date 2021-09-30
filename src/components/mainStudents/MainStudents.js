@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useRef} from 'react'
+import React, {useRef} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap'
 import './main_students.css'
@@ -7,16 +7,11 @@ import mainStudent2 from '../../img/students/Main_student2.jpg'
 import mainStudent3 from '../../img/students/Main_student4.jpg'
 import mainStudent4 from '../../img/students/Main_student4update.png'
 import MainStudent from './MainStudent.js'
-import { MyContext } from '../../App';
+import { useAnchorCreator } from '../../hooks/useAnchorCreator';
 
 let MainStudents = () => {
-    const value = useContext(MyContext);
     const anchor = useRef();
-
-    useEffect(() => {
-        value.updateAnchors(anchor);
-    },[])
-
+    useAnchorCreator(anchor);
     return (
         <div className="anchor__source wrapper__main_students" id ="ms" ref = {anchor}>
             <Carousel fade>
