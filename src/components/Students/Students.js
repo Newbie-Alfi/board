@@ -1,5 +1,5 @@
 import React, { useState, useContext, useRef, useEffect } from 'react'
-import { MyContext } from '../App.js'
+import { MyContext } from '../../App.js'
 import Student from './Student.js'
 import './Students.css'
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext} from 'react';
 import './App.css';
-import { AnchorList } from './Anchor/AnchorList.js';
-import Separator from './Separator/Separator';
-import MainStudents from './mainStudents/MainStudents.js';
-import { Header } from './Header/Header.js';
-import { Footer } from './Footer/Footer';
-import { Students } from './Students/Students';
+import { AnchorList } from './components/Anchor/AnchorList';
+import Separator from './components/Separator/Separator';
+import MainStudents from './components/mainStudents/MainStudents.js';
+import { Header } from './components/Header/Header.js';
+import { Footer } from './components/Footer/Footer';
+import { Students } from './components/Students/Students';
 import './fonts/fonts.css'
 
 export const MyContext = React.createContext()
@@ -21,10 +21,8 @@ export function App() {
     listAnchorNodes.map(anchorNode => {
       setAnchorParametrs(prev => [...prev, {Y : anchorNode.current.getBoundingClientRect().top + window.pageYOffset, id: Date.now() + Math.random()}])
     })
-    
   },[listAnchorNodes])
-  
-  return (
+    return (
     <MyContext.Provider value={{
       listAnchorNodes, updateAnchors
     }}>
@@ -32,7 +30,7 @@ export function App() {
             <Header/>
             <AnchorList anchors = {listAnchorParameters}/>
             <Separator text={'Мы даем возможность'}/>
-            <MainStudents/>
+            <MainStudents/>          
             <Separator  text={'Наши студенты'}/>
             <Students/>
             <Footer/>

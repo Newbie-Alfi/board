@@ -1,10 +1,10 @@
 import React, {useRef, useEffect, useContext} from 'react';
-import { MyContext } from '../App';
-import board from './board_logo.svg'
+// import { useAnchorCreator } from '../../'
+import { MyContext } from '../../App';
+import board from '../../img/header/board_logo.svg'
 import { Navbar } from '../Navbar/Navbar';
-import header from './header.jpg'
+import header from '../../img/header/header.jpg'
 import './header.css';
-import '.././fonts/fonts.css'
 
 export function Header() {
     const anchor = useRef();

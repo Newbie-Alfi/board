@@ -2,12 +2,12 @@ import React, {useContext, useEffect, useRef} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap'
 import './main_students.css'
-import mainStudent1 from './Main_student1.jpg'
-import mainStudent2 from './Main_student2.jpg'
-import mainStudent3 from './Main_student3.jpg'
-import mainStudent4 from './Main_student4update.png'
+import mainStudent1 from '../../img/students/Main_student1.jpg'
+import mainStudent2 from '../../img/students/Main_student2.jpg'
+import mainStudent3 from '../../img/students/Main_student4.jpg'
+import mainStudent4 from '../../img/students/Main_student4update.png'
 import MainStudent from './MainStudent.js'
-import { MyContext } from '../App';
+import { MyContext } from '../../App';
 
 let MainStudents = () => {
     const value = useContext(MyContext);

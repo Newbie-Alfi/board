@@ -1,8 +1,8 @@
 import './SocNet.css'
-import soc1 from './inst.svg'
-import soc2 from './youtube.svg'
-import soc4 from './fc.svg'
-import soc5 from './twitter.svg'
+import soc1 from '../../img/icons/vk.svg'
+import soc2 from '../../img/icons/youtube.svg'
+import soc4 from '../../img/icons/fc.svg'
+import soc5 from '../../img/icons/twitter.svg'
 
 let SocNet = () => {
     return (

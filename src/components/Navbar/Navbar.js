@@ -2,7 +2,6 @@ import "./Navbar.css"
 import './bur.css'
 import React from 'react';
 import { BurgerAndMenu } from "./BurgerAndMenu.js";
-import '.././fonts/fonts.css'
 
 export function Navbar(){
         return(

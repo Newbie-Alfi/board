@@ -1,5 +1,5 @@
 import './Students.css'
-import '.././fonts/fonts.css'
+
 let Student = (props) => {
     return(
             <a className="student">

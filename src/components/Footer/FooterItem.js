@@ -1,6 +1,4 @@
-// import './footer.css'
 import './footer__item.css'
-import '.././fonts/fonts.css'
 import { useState } from 'react';
 
 export function FooterItem(props){
