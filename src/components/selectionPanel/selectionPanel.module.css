@@ -1,0 +1,33 @@
+.wrapper{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #cdbcaf;
+}
+.title{
+    font-size: 72px;
+}
+.subTitle{
+    font-size: 36px;
+    color: rgba(0, 0, 0, 0.30);
+}
+.form{
+    width: 20%;
+    height: 25%;
+}
+.select{
+    color: white;
+    border-color: white ;
+    background: none;
+    width: 100%;
+    height: 100%;
+    border-radius:  40px;
+    text-align: center;
+}
+option{
+    font-size: 1.5em;
+    color: #1e1e1e;
+}
