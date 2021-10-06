@@ -11,6 +11,7 @@ import './fonts/fonts.css'
 import { SelectionPanel } from './components/selectionPanel/SelectionPanel';
 import { Navbar } from './components/Navbar/Navbar';
 import { Registration } from './components/registration/Registration';
+import { UserPage } from './components/userPage/UserPage';
 
 
 export const MyContext = React.createContext()
@@ -55,7 +56,15 @@ export function App() {
                 <Navbar/>
                 <Registration/>
               </Route>
-              <Redirect to="/board"/>
+              <Route path="/user">
+                <Navbar/>
+                <UserPage></UserPage>
+              </Route>
+              <Route path="/admin">
+                <Navbar/>
+                <UserPage></UserPage>
+              </Route>
+              {/* <Redirect to="/board"/> */}
           </div>
         </MyContext.Provider>
       </Switch>
