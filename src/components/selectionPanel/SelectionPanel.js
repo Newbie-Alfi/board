@@ -1,9 +1,6 @@
-import { useState } from 'react'
 import selPanel from './selectionPanel.module.css'
 
 export function SelectionPanel (props) {
-    let options = ["КТиИБ", "ТД"]
-
     return (
         <div className={selPanel.wrapper}>
             <h1 className={selPanel.title}>Лидеры проектной деятельности</h1>

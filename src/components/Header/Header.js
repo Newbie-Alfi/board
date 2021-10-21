@@ -1,14 +1,13 @@
-import React, {useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import { useAnchorCreator } from '../../hooks/useAnchorCreator.js'
 import board from '../../img/header/board_logo.svg'
 import { Navbar } from '../Navbar/Navbar';
 import header from '../../img/header/header.jpg'
 import './header.css';
 
-export function Header() {
+export const Header = () => {
     const anchor = useRef();
     useAnchorCreator(anchor);
-
     return (
         <header className="header" id="pos1" ref={anchor}>
             <div className="header__container">
